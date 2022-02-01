@@ -30,6 +30,15 @@
             background: #ffe244;
         }
 
+        p.calc-message{
+            color: #fff;
+            font-size: 18px;
+            padding: 5px;
+            background: #0cab85;
+            border: 3px solid #000;
+            border-radius: 4px;
+        }
+
     </style>
 
 </head>
@@ -62,11 +71,13 @@
 
                 <?php if(isset($_POST) && !empty($_POST)): ?>
                     
-                    <p> <?= "Por conta dos seus $cigarroPorDia cigarros por dia durante $periodoDeFumo anos, você perdeu $diasContados dias de vida :( " ?></p>
+                    <p class="mt-5 calc-message"> <?= "Ao fumar cigarro <strong> 10 </strong> vezes ao dia, por <strong >3 </strong> anos uma pessoa perderia aproximadamente: <br /> {$tempo_perdido_meses} <strong> meses </strong>, {$tempo_perdido_dias} <strong> dias </strong>, {$tempo_perdido_horas} <strong> horas </strong> e {$tempo_perdido_minutos} <strong> minutos </strong> de vida." ?></p>
 
                 <?php endif; ?>
 
-
+                <p style="position: absolute; bottom: 0;">
+                    O código desta aplicação pode ser visto em <a href="https://github.com/jeffersonchaves/app-dias-perdidos">https://github.com/jeffersonchaves/app-dias-perdidos</a>
+                </p>
             </div>
         </div>
     </div>
